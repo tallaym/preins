@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infos"
+    android:layout_margin="10dp"
+    android:padding="10dp">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/header"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INFORMATIONS INSCRIPTION"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
+
+
+
+    <!-- nom -->
+    <LinearLayout
+        android:id="@+id/bloc_nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <TextView
+            android:id="@+id/inom"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Nom : " />
+
+        <TextView
+            android:id="@+id/nom"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- telephone -->
+    <LinearLayout
+        android:id="@+id/bloc_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloc_nom">
+
+        <TextView
+            android:id="@+id/itel"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Télephone : " />
+
+        <TextView
+            android:id="@+id/tel"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+    <!-- datenaiss -->
+    <LinearLayout
+        android:id="@+id/bloc_naiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloc_tel">
+
+        <TextView
+            android:id="@+id/ibirth"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Date de naissance : " />
+
+        <TextView
+            android:id="@+id/birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             />
+
+
+
+    </LinearLayout>
+
+    <!-- origine -->
+    <LinearLayout
+        android:id="@+id/bloc_origine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloc_naiss">
+
+        <TextView
+            android:id="@+id/iorigine"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Origine : " />
+
+        <TextView
+            android:id="@+id/origine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+    <!-- filière -->
+    <LinearLayout
+        android:id="@+id/bloc_choix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloc_origine">
+
+        <TextView
+            android:id="@+id/ichoix"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Filière : " />
+
+        <TextView
+            android:id="@+id/choix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <!-- button -->
+    <LinearLayout
+        android:id="@+id/bloc_valider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloc_choix"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/send"
+            android:text="envoyer"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel"
+            android:text="retour"/>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
