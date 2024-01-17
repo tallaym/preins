@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Preinscription"
         tools:targetApi="31">
-        <uses-permission android:name="android.permission.SEND_SMS" />
         <activity
             android:name=".infos"
             android:exported="false" />

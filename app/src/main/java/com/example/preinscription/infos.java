@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.pm.PackageManager;
 
 public class infos extends AppCompatActivity {
 
@@ -23,7 +24,20 @@ public class infos extends AppCompatActivity {
         envoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Texter(v);
+                String nom = ((TextView) findViewById(R.id.nom)).getText().toString();
+
+                // Créer un Intent pour envoyer un SMS
+                Intent intent2 = new Intent(Intent.ACTION_SENDTO);
+                intent2.setData(Uri.parse("smsto:" + Uri.encode("+221770661163")));
+
+                intent2.putExtra("sms_body", "NomComplet: " + nom);
+                startActivity(intent2);
+              /*  if (intent2.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent2);
+                } else {
+                    // Gérer le cas où aucune application de messagerie n'est disponible
+                    Toast.makeText(getApplicationContext(), "Aucune application de messagerie n'est disponible", Toast.LENGTH_SHORT).show();
+                }*/
             }
         });
 
@@ -62,24 +76,7 @@ public class infos extends AppCompatActivity {
         }
 
 
-        //envoi par sms
-      /*  public void Texter(View w){
 
-            String nom = ((TextView) findViewById(R.id.nom)).getText().toString();
 
-            // Créer un Intent pour envoyer un SMS
-            Intent intent2 = new Intent(Intent.ACTION_SENDTO);
-            intent2.setData(Uri.parse("smsto:" + Uri.encode("+221770661163"))); // Remplacez "NuméroDeTéléphone" par le numéro de téléphone destinataire
-
-            // Ajouter le texte du SMS
-            intent.putExtra("sms_body", "NomComplet: " + nom);
-
-            if (intent.resolveActivity(getPackageManager()) != null) {
-                startActivity(intent);
-            } else {
-                // Gérer le cas où aucune application de messagerie n'est disponible
-                Toast.makeText(this, "Aucune application de messagerie n'est disponible", Toast.LENGTH_SHORT).show();
-            }
-        }*/
+        }
     }
-}
