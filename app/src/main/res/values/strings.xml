@@ -1,13 +1,27 @@
 <resources>
     <string name="app_name">Preinscription</string>
+    <string name="msg_demande">DEMANDE D\'INSCRIPTION</string>
+    <string name="firstname">Prénom(s) :</string>
+    <string name="lastname">Nom :</string>
+    <string name="phone_number">Télephone :</string>
+    <string name="birthday">Date de naissance :</string>
+    <string name="origin">Origine :</string>
+    <string name="department">Filière :</string>
+    <string name="save">ENREGISTRER</string>
+    <string name="cancel">ANNULER</string>
+    <string name="msg_infos">INFORMATIONS DE L\'INSCRIPTION</string>
+    <string name="send">ENVOYER</string>
+    <string name="back">RETOUR</string>
 
     <string-array name="pays">
+        <item>Sélectionner</item>
         <item>Senegal</item>
         <item>Mali</item>
         <item>Guinée</item>
     </string-array>
 
     <string-array name="filiere">
+        <item>Sélectionner</item>
         <item>Génie Logiciel</item>
         <item>Réseaux</item>
         <item>Infographie</item>

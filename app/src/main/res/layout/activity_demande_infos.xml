@@ -5,20 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".demande_infos"
-    android:layout_margin="10dp"
-    android:padding="10dp">
+    >
 
     <include
         android:id="@+id/head"
         layout="@layout/header"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="-15dp"
+        tools:layout_editor_absoluteY="85dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/demande_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DEMANDE INSCRIPTION"
+        android:text="@string/msg_demande"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,178 +26,193 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.077" />
 
-    <!-- prenom -->
     <LinearLayout
-        android:id="@+id/bloc_prenom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="407dp"
+        android:layout_height="351dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintTop_toBottomOf="@+id/demande_title"
+        app:layout_constraintVertical_bias="0.137">
 
-        <TextView
-            android:id="@+id/iprenom"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Prénom(s) : " />
-
-        <EditText
-            android:id="@+id/prenom"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-
-    </LinearLayout>
-
-    <!-- nom -->
-    <LinearLayout
-        android:id="@+id/bloc_nom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloc_prenom">
-
-        <TextView
-            android:id="@+id/inom"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Nom : " />
-
-        <EditText
-            android:id="@+id/nom"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-
-    </LinearLayout>
-
-    <!-- telephone -->
-    <LinearLayout
-        android:id="@+id/bloc_tel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloc_nom">
-
-        <TextView
-            android:id="@+id/itel"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Télephone : " />
-
-        <EditText
-            android:id="@+id/tel"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:inputType="number" />
-
-    </LinearLayout>
-
-    <!-- datenaiss -->
-    <LinearLayout
-        android:id="@+id/bloc_naiss"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloc_tel">
-
-        <TextView
-            android:id="@+id/ibirth"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Date de naissance : " />
-
-        <EditText
-            android:id="@+id/birth"
+        <!-- prenom -->
+        <LinearLayout
+            android:id="@+id/bloc_prenom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="date" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/demande_title">
 
+            <TextView
+                android:id="@+id/iprenom"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/firstname" />
 
+            <EditText
+                android:id="@+id/prenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <!-- origine -->
-    <LinearLayout
-        android:id="@+id/bloc_origine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloc_naiss">
-
-        <TextView
-            android:id="@+id/iorigine"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Origine : " />
-
-        <Spinner
-            android:id="@+id/origine"
+        <!-- nom -->
+        <LinearLayout
+            android:id="@+id/bloc_nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/pays">
-        </Spinner>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bloc_prenom">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/inom"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lastname" />
 
-    <!-- filière -->
-    <LinearLayout
-        android:id="@+id/bloc_choix"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloc_origine">
+            <EditText
+                android:id="@+id/nom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
 
-        <TextView
-            android:id="@+id/ichoix"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Filière : " />
+        </LinearLayout>
 
-        <Spinner
-            android:id="@+id/choix"
+        <!-- telephone -->
+        <LinearLayout
+            android:id="@+id/bloc_tel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/filiere">
-        </Spinner>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bloc_nom">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/itel"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number" />
 
-    <!-- button -->
-    <LinearLayout
-        android:id="@+id/bloc_valider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloc_choix"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        >
+            <EditText
+                android:id="@+id/tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
 
-        <Button
-            android:layout_width="120dp"
+        </LinearLayout>
+
+        <!-- datenaiss -->
+        <LinearLayout
+            android:id="@+id/bloc_naiss"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/send"
-            android:text="enregistrer"
-            android:layout_marginRight="10dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bloc_tel">
 
-        <Button
-            android:layout_width="120dp"
+            <TextView
+                android:id="@+id/ibirth"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/birthday" />
+
+            <EditText
+                android:id="@+id/birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date" />
+
+
+        </LinearLayout>
+
+        <!-- origine -->
+        <LinearLayout
+            android:id="@+id/bloc_origine"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/cancel"
-            android:text="annuler"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bloc_naiss">
 
+            <TextView
+                android:id="@+id/iorigine"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/origin" />
+
+            <Spinner
+                android:id="@+id/origine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/pays">
+            </Spinner>
+
+        </LinearLayout>
+
+        <!-- filière -->
+        <LinearLayout
+            android:id="@+id/bloc_choix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bloc_origine">
+
+            <TextView
+                android:id="@+id/ichoix"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/department" />
+
+            <Spinner
+                android:id="@+id/choix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/filiere" />
+
+        </LinearLayout>
+
+        <!-- button -->
+        <LinearLayout
+            android:id="@+id/bloc_valider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bloc_choix">
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/save" />
+
+            <Button
+                android:id="@+id/cancel"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/cancel" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

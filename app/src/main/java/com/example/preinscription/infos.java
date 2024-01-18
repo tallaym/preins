@@ -57,7 +57,6 @@ public class infos extends AppCompatActivity {
             String origineValue = intent.getStringExtra("ORIGINE");
             String choixValue = intent.getStringExtra("CHOIX");
 
-            // Afficher les données dans les TextView de cette activité
             TextView nom = findViewById(R.id.nom);
             nom.setText(prenomValue + " " + nomValue);
 
